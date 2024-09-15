@@ -1,9 +1,5 @@
 pipeline {
-  agent {
-    node {
-      customWorkspace ''
-    }
-  }
+  agent any
   parameters{
     string(name: "ano_arquivo", description: "Ano do arquivo a ser baixado")
   }
