@@ -12,5 +12,5 @@ os.system('cd BR_regiao_sudeste_2022')
 sudeste = geopandas.read_file('BR_regiao_sudeste_2022/BR_região_sudeste_2022.shp', crs="epsg:4326")
 os.system('cd ../')
 clipped = data.rio.clip(sudeste.geometry.apply(mapping), sudeste.crs, drop=True)
-clipped.to_netcdf("dados_cortados_" + arquivo)
+clipped.to_netcdf("dados_cortados_" + arquivo + ".nc")
 
