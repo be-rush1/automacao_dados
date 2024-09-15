@@ -19,6 +19,7 @@ pipeline {
     }
     stage('Corta os Dados') {
       steps {
+        sh 'echo olá'
      //   sh 'python3 corta_dados.py'
       }
     }
