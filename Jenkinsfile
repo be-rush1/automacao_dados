@@ -4,9 +4,9 @@ pipeline {
     string(name: "Ano-Arquivo", description: "Ano do arquivo a ser baixado")
   }
   stages {
-    stage('version') {
+    stage('Baixando dados de $params.Ano-Arquivo') {
       steps {
-        sh 'python3 --version'
+        sh 'wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.$params.Ano-Arquivo.monthly.nc'
       }
     }
     stage('hello') {
