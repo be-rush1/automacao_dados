@@ -4,7 +4,7 @@ pipeline {
     string(name: "ANO_ARQUIVO", description: "Ano do arquivo a ser baixado")
   }
   environment{
-    ANO_ARQUIVO = ${params.ANO_ARQUIVO}
+    ANO_ARQUIVO =  "${params.ANO_ARQUIVO}"
   }
   stages {
     stage('Baixando dados de ${params.ANO_ARQUIVO}') {
