@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters{
-    string(name: "ANO_ARQUIVO", description: "Ano do arquivo a ser baixado")
+    string(name: "ANO_ARQUIVO", description: "Ano a partir que o arquivo vai ser baixado")
   }
   environment{
     NOME_ARQUIVO =  "${params.ANO_ARQUIVO}" 
