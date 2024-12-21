@@ -4,7 +4,7 @@ pipeline {
     string(name: "ANO_ARQUIVO", description: "Ano a partir que o arquivo vai ser baixado", defaultValue: "1981")
   }
   stages {
-    stage('Baixando dados a partir de \${params.ANO_ARQUIVO}') {
+    stage("Baixando dados a partir de \${params.ANO_ARQUIVO}") {
       steps {        
         
         sh """
