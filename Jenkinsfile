@@ -7,10 +7,9 @@ pipeline {
     stage("Baixando dados do CHIRPS") {
       steps {        
         sh '''
-        echo "olá"
-        #for i in $(seq ${params.ANO_ARQUIVO} 2024); do
-        #  wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.${i}.monthly.nc
-        #done 
+        for i in $(seq 1981 2024); do
+          wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.${i}.monthly.nc
+        done 
            '''
       }
     }
