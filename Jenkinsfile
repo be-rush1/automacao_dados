@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters{
-    string(name: "ANO_ARQUIVO", description: "Ano a partir que o arquivo vai ser baixado", default: 1981)
+    string(name: "ANO_ARQUIVO", description: "Ano a partir que o arquivo vai ser baixado", defaultValue: 1981)
   }
   stages {
     stage('Baixando dados a partir de ${params.ANO_ARQUIVO}') {
