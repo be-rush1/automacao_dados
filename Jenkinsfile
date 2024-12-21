@@ -7,11 +7,11 @@ pipeline {
     stage("Baixando dados a partir de \${params.ANO_ARQUIVO}") {
       steps {        
         
-        sh """
+        sh '''
         for i in \$(seq \${params.ANO_ARQUIVO} 2024); do
           wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.\$i.monthly.nc
         done 
-           """
+           '''
 
       }
     }
