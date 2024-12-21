@@ -4,7 +4,7 @@ pipeline {
     string(name: "ANO_ARQUIVO", description: "Ano a partir que o arquivo vai ser baixado", defaultValue: "1981")
   }
   stages {
-    stage("Baixando dados do CHIRPS) {
+    stage("Baixando dados do CHIRPS") {
       steps {        
         sh """
         for i in \$(seq \${params.ANO_ARQUIVO} 2024); do
