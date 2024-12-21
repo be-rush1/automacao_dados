@@ -10,7 +10,7 @@ pipeline {
         sh '''
         #!/bin/bash
         for i in $(seq ${params.ANO_ARQUIVO} 2024); do
-          wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.\${i}.monthly.nc
+          wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.\$i.monthly.nc
         done
            '''
 
