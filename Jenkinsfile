@@ -12,7 +12,7 @@ pipeline {
         
         sh """
         
-        for i in {${params.ANO_ARQUIVO}..2024} do
+        for i in $(seq ${params.ANO_ARQUIVO} 2024); do
           wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.${i}.monthly.nc
         done
         """
