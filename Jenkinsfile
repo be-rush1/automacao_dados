@@ -7,10 +7,15 @@ pipeline {
     NOME_ARQUIVO =  "${params.ANO_ARQUIVO}" 
   }
   stages {
-    stage('Baixando dados de ${params.ANO_ARQUIVO}') {
+    stage('Baixando dados a partir de ${params.ANO_ARQUIVO}') {
       steps {        
         
-        sh """wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.${params.ANO_ARQUIVO}.monthly.nc"""
+        sh """
+        
+        for x in {${params.ANO_ARQUIVO}..2024} do
+          wget https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/byYear/chirps-v2.0.${x}.monthly.nc
+        done
+        """
 
       }
     }
